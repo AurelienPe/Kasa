@@ -1,0 +1,45 @@
+body {
+  font-family: Montserrat;
+  font-weight: 500;
+  margin: 0;
+}
+
+nav,
+main {
+  padding: 0 15px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;  
+}
+
+a:hover, a:focus {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+img {
+  height: auto;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  nav,
+  main {
+    padding: 15px 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  nav,
+  main {
+    padding: 40px 80px;
+  }
+}
