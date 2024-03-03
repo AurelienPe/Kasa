@@ -6,7 +6,7 @@ import Home from './pages/home/home'
 import Footer from './components/footer/footer'
 import Header from './components/header/header'
 import Error from './pages/404error/404error'
-import About from "./pages/about/about";
+import About from "./pages/about/about"
 
 const root = createRoot(document.getElementById('root'));
 
