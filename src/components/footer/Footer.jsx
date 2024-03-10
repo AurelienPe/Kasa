@@ -1,7 +1,7 @@
-import logo from '../../images/logofooter.png'
+import logo from '../../images/logo-footer.png'
 import './footer.css'
 
-function Footer() {
+const Footer = () => {
   return (
     <footer>
       <img src={logo} alt="logo kasa" />

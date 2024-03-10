@@ -30,16 +30,21 @@ img {
   object-fit: cover;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
 @media (min-width: 768px) {
   nav,
   main {
-    padding: 15px 30px;
+    padding: 10px 30px;
   }
 }
 
 @media (min-width: 1024px) {
   nav,
   main {
-    padding: 40px 80px;
+    padding: 20px 80px;
   }
 }

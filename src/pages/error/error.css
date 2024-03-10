@@ -15,10 +15,7 @@
   font-size: 1.1rem;
   margin: 0 55px;
   text-align: center;
-}
-
-.desktop-error-text {
-  display: none;
+  word-wrap: break-word;
 }
 
 .error a {
@@ -32,25 +29,25 @@
     width: 400px;
   }
 
-  .error .desktop-error-text {
-    display: block;
+  .error p {
     font-size: 1.6rem;
-  }
-
-  .mobile-error-text {
-    display: none;  
   }
 
   .error a {
     font-size: 1rem;
   }
+
+  br {
+    display: none;
+  }
 }
 
 @media (min-width: 1024px) {
 
-  .error .desktop-error-text {
+  .error p {
     font-size: 2.2rem;
   }
+
   .error img {
     width: 600px;
   }
