@@ -11,6 +11,7 @@
   background-color: #FF6060;
   border-radius: 5px;
   margin-top: 20px;
+  position: relative;
 }
 
 .collapse h2 {
@@ -30,6 +31,13 @@
   animation-duration: 0.3s;
 }
 
+.collapse p {
+  margin: 0;
+  padding: 10px;
+  position: absolute;
+  top: 50px;
+}
+
 .show {
   display: block;
   transition: 0.5s all;
@@ -47,10 +55,6 @@
 .fa-chevron-up {
   font-size: 1rem;
   color: white;
-}
-
-.collapse p {
-  display: none;
 }
 
 @media (min-width: 768px) {
