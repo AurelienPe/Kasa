@@ -1,0 +1,146 @@
+.accommodationpage {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.accommodationpage h2:not(.collapse h2) {
+  color: #FF6060;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.accommodationpage img {
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+}
+
+.accommodationpage div {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.accommodationpage div li:last-child{
+  width: 100%;
+}
+
+.accommodationpage i:not(.collapse i) {
+  color: #FF6060;
+}
+
+.collapse {
+  margin-bottom: 50px;
+}
+
+.collapse li:first-child {
+  margin-top: 0px;
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  width: 84px;
+  padding: 3px 0;
+  font-size: 0.7rem;
+  text-align: center;
+  color: white;
+  background-color: #FF6060;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.host-name {
+  color: #FF6060;
+  text-align: right;
+  margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .accommodationpage div {
+    position: absolute;
+    flex-wrap: wrap;
+    right: 30px;
+    width: 200px;
+  }
+
+  .tag {
+    width: 100px;
+    padding: 3px 0;
+    font-size: 0.8rem;
+    border-radius: 7px;
+  }
+
+  .collapse h2 {
+    font-size: 1rem;
+  }
+
+  .accommodationpage img{
+    width: 48px;
+    height: 48px;
+  }
+
+  .accommodationpage div li:last-child {
+    width: auto;
+    margin-top: 20px;
+  }
+
+  .accommodationpage i:not(.collapse i) {
+    margin-right: 5px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .accommodationpage {
+    margin-top: 25px;
+  }
+
+  .accommodationpage h2:not(.collapse h2) {
+    font-size: 2.3rem;
+  }
+
+  .collapse {
+    flex-direction: row;
+    gap: 50px;
+    width: 100%;
+  }
+
+  .collapse li {
+    width: 100%;
+    margin: 0;
+    border-radius: 10px;
+  }
+
+  .collapse h2 {
+    font-size: 1.2rem;
+  }
+
+  .tag {
+    width: 115px;
+    padding: 4px 0;
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
+
+  .accommodationpage img{
+    width: 64px;
+    height: 64px;
+  }
+
+  .host-name {
+    width: min-content;
+    font-size: 1.5rem;
+  }
+
+  .accommodationpage div {
+    right: 80px;
+  }
+}
