@@ -36,14 +36,6 @@ button {
   background-color: transparent;
 }
 
-.display-block {
-  display: block;
-}
-
-.display-none {
-  display: none;
-}
-
 @media (min-width: 768px) {
   nav,
   main {

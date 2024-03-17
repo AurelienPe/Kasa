@@ -7,11 +7,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   height: 30px;
   background-color: #FF6060;
   border-radius: 5px;
   margin-top: 20px;
-  position: relative;
 }
 
 .collapse h2 {
@@ -33,14 +33,21 @@
 
 .collapse p {
   margin: 0;
-  padding: 10px;
-  position: absolute;
-  top: 50px;
+  position: relative;
 }
 
 .show {
   display: block;
   transition: 0.5s all;
+}
+
+.display-block {
+  display: block;
+  padding-bottom: 50px;
+}
+
+.display-none {
+  display: none;
 }
 
 @keyframes rotate {
@@ -52,7 +59,7 @@
   }
 }
 
-.fa-chevron-up {
+.fa-chevron-up, .fa-chevron-down {
   font-size: 1rem;
   color: white;
 }
@@ -72,7 +79,7 @@
     margin-right: 10px;
   }
 
-  .fa-chevron-up {
+  .fa-chevron-up, .fa-chevron-down {
   font-size: 1.2rem;
   }
 }
@@ -97,7 +104,7 @@
     margin-right: 15px;
   }
 
-  .fa-chevron-up {
+  .fa-chevron-up, .fa-chevron-down {
     font-size: 1.5rem;
   }
 }

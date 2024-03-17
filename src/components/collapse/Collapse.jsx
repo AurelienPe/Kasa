@@ -1,22 +1,21 @@
 import './collapse.css'
 import React, { useState } from 'react';
 
-const Collapse = ({ data }) => {
+const Collapse = ({ title, text, index }) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const expandCollapse = (index) => {
     setActiveIndex(index === activeIndex ? null : index);
   }
-
-  const collapseItems = data.map((item, index) => (
+  const collapseItems =
     <li key={index}>
-      <h2>{item.title}</h2>
+      <h2>{title}</h2>
       <button onClick={() => expandCollapse(index)}>
         <i className={`fa-solid ${activeIndex === index ? 'fa-chevron-down' : 'fa-chevron-up'}`}></i>
       </button>
-      <p className={activeIndex === index ? 'display-block' : 'display-none'}>{item.text}</p>
+      <p className={activeIndex === index ? 'display-block' : 'display-none'}>{text}</p>
     </li>
-  ));
+    ;
 
   return collapseItems;
 }
