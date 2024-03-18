@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './accommodationpage.css';
 import Carousel from '../../components/carousel/Carousel';
 import logementsData from '../../assets/logements'
-import './accommodationpage.css'
 import Collapse from '../../components/collapse/Collapse';
+import Rating from '../../components/rating/Rating';
 
 const Accommodationpage = () => {
   const [accommodationData, setAccommodationData] = useState(null);
@@ -38,19 +38,17 @@ const Accommodationpage = () => {
             </li>
 
             <div>
-              <li>
-                <img src={accommodationData.host.picture} alt={accommodationData.host.name} />
-              </li>
-
-              <li className="host-name">{accommodationData.host.name}</li>
 
               <li>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
+                <Rating rating={accommodationData.rating} />
               </li>
+              <div>
+                <li className="host-name">{accommodationData.host.name}</li>
+
+                <li>
+                  <img src={accommodationData.host.picture} alt={accommodationData.host.name} />
+                </li>
+              </div>
             </div>
 
             <li className="collapse">
