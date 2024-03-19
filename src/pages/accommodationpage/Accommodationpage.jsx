@@ -4,6 +4,7 @@ import Carousel from '../../components/carousel/Carousel';
 import logementsData from '../../assets/logements'
 import Collapse from '../../components/collapse/Collapse';
 import Rating from '../../components/rating/Rating';
+import Error from '../../pages/error/Error';
 
 const Accommodationpage = () => {
   const [accommodationData, setAccommodationData] = useState(null);
@@ -32,8 +33,8 @@ const Accommodationpage = () => {
             <li>{accommodationData.location}</li>
 
             <li className="tags-list">
-              {accommodationData.tags.map(tag => (
-              <p className="tag">{tag}</p>
+              {accommodationData.tags.map((tag, index) => (
+                <p key={index} className="tag">{tag}</p>
               ))}
             </li>
 
@@ -51,22 +52,22 @@ const Accommodationpage = () => {
               </div>
             </div>
 
-            <li className="collapse">
-              <Collapse 
-              title='Description'
-              text={accommodationData.description} 
+            <ul className="collapse">
+              <Collapse
+                title='Description'
+                text={accommodationData.description}
               />
 
               <Collapse
-              title='Équipements'
-              text={accommodationData.equipments}
+                title='Équipements'
+                text={accommodationData.equipments}
               />
-            </li>
+            </ul>
 
           </ul>
         </>
       ) : (
-        <div>Loading...</div>
+        <Error />
       )}
     </main>
   );

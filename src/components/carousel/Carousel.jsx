@@ -17,11 +17,11 @@ const Carousel = ({ images }) => {
       <img src={images[currentImageIndex]} alt='' />
 
       <button onClick={goToPreviousImage}>
-        <i class="fa-solid fa-chevron-left"></i>
+        <i className="fa-solid fa-chevron-left"></i>
       </button>
 
       <button onClick={goToNextImage}>
-        <i class="fa-solid fa-chevron-right"></i>
+        <i className="fa-solid fa-chevron-right"></i>
       </button>
 
     </header>

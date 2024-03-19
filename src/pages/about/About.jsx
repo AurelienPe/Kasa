@@ -11,6 +11,7 @@ const About = () => {
 
     return (
       <Collapse
+        key={index}
         title={title}
         text={text}
         index={index}
