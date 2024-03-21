@@ -61,6 +61,7 @@ const Accommodationpage = () => {
               <Collapse
                 title='Équipements'
                 text={accommodationData.equipments}
+                list={true}
               />
             </ul>
 

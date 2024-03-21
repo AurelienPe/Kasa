@@ -3,7 +3,7 @@
   flex-direction: column;
 }
 
-.collapse li {
+.collapse header {
   display: flex;
   justify-content: space-between;
   align-content: center;
@@ -11,7 +11,7 @@
   height: 30px;
   background-color: #FF6060;
   border-radius: 5px;
-  margin-top: 20px;
+  margin: 10px 0;
 }
 
 .collapse h2 {
@@ -26,37 +26,22 @@
   animation-fill-mode: forwards;
 }
 
-.collapse button:active {
-  animation-name: rotate;
-  animation-duration: 0.3s;
-}
-
 .collapse p {
   margin: 0;
   position: relative;
-}
-
-.show {
-  display: block;
-  transition: 0.5s all;
+  margin: 5px 10px 0;
 }
 
 .display-block {
-  display: block;
-  padding-bottom: 50px;
+  transform: translate(0, 0);
+}
+
+.display-block:last-child {
+  margin-bottom: 30px;
 }
 
 .display-none {
-  display: none;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-180deg);
-  }
+  transform: translate(0, 100px);
 }
 
 .fa-chevron-up, .fa-chevron-down {
@@ -66,7 +51,7 @@
 
 @media (min-width: 768px) {
 
-  .collapse li{
+  .collapse header{
     height: 40px;
     margin-top: 25px;
   }
@@ -91,7 +76,7 @@
     width: 85%;
   }
 
-  .collapse li{
+  .collapse header{
     height: 50px;
     margin-top: 35px;
   }

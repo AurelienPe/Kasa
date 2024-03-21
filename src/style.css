@@ -1,5 +1,5 @@
 body {
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-weight: 500;
   margin: 0;
 }
@@ -28,12 +28,17 @@ a:hover, a:focus {
 img {
   height: auto;
   object-fit: cover;
+  max-width: 100%;
 }
 
 button {
   cursor: pointer;
   border: none;
   background-color: transparent;
+}
+
+figure {
+  margin: 0;
 }
 
 @media (min-width: 768px) {

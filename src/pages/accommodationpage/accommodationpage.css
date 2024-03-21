@@ -16,20 +16,13 @@
   width: 32px;
   height: 32px;
   border-radius: 32px;
+  max-width: none;
 }
 
 .accommodationpage div {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.accommodationpage .collapse {
-  margin-bottom: 50px;
-}
-
-.accommodationpage .collapse li:first-child {
-  margin-top: 0px;
 }
 
 .tags-list {
