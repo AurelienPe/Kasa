@@ -47,6 +47,12 @@
 
 @media (min-width: 768px) {
 
+  .card-container {
+    background-color: #f6f6f6;
+    padding: 20px;
+    border-radius: 15px;
+  }
+
   .card-container figure {
     width: calc((100% - 30px) / 2);
     height: 300px;
@@ -56,8 +62,9 @@
 
 @media (min-width: 1024px) {
 
-  .card-container { 
+  .card-container {
     margin-top: 80px;
+    padding: 30px;
   }
 
   .card-container figure {

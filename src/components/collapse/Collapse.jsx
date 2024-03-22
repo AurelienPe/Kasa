@@ -1,7 +1,7 @@
 import './collapse.css'
 import React, { useState } from 'react';
 
-const Collapse = ({ title, text, key, list }) => {
+const Collapse = ({ title, text, customKey, list }) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const expandCollapse = (key) => {
@@ -9,20 +9,22 @@ const Collapse = ({ title, text, key, list }) => {
   }
 
   const collapseItems =
-    <li key={key}>
+    <li key={customKey}>
       <header>
         <h2>{title}</h2>
-        <button onClick={() => expandCollapse(key)}>
-          <i className={`fa-solid ${activeIndex === key ? 'fa-chevron-down' : 'fa-chevron-up'}`}></i>
+        <button onClick={() => expandCollapse(customKey)}>
+          <i className={`fa-solid ${activeIndex === customKey ? 'fa-chevron-down' : 'fa-chevron-up'}`}></i>
         </button>
       </header>
-      {list ? (
-        text.map((item, index) => (
-          <p key={index} className={activeIndex === key ? 'display-block' : 'display-none'}>{item}</p>
-        ))
-      ) : (
-      <p className={activeIndex === key ? 'display-block' : 'display-none'}>{text}</p>
-      )}
+      <div>
+        {list ? (
+          text.map((item, index) => (
+            <p key={index} className={activeIndex === customKey ? 'display-block' : 'display-none'}>{item}</p>
+          ))
+        ) : (
+          <p className={activeIndex === customKey ? 'display-block' : 'display-none'}>{text}</p>
+        )}
+      </div>
     </li>
     ;
 

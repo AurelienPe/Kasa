@@ -8,12 +8,15 @@ const Home = () => {
 
   return (
     <main>
+
       <Banner
         url={bannerimg}
         altText={"banner home"} />
-            <Cards
-              data={accommodation}
-            />
+
+      <Cards
+        data={accommodation}
+      />
+
     </main>
   )
 }

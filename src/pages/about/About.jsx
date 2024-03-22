@@ -11,20 +11,22 @@ const About = () => {
 
     return (
       <Collapse
-        key={index}
         title={title}
         text={text}
-        index={index}
+        key={index}
+        uniqueKey={index}
       />
     );
   });
 
   return (
     <main>
-      <Banner 
+      <Banner
         url={bannerimg}
-        className={"display-none"} 
-        altText={"about banner"}/>
+        className={"display-none"}
+        altText={"about banner"}
+        key={1}
+        />
 
       <ul className="collapse">
         {mappedData}

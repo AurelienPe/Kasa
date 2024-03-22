@@ -32,6 +32,10 @@
   margin: 5px 10px 0;
 }
 
+.collapse div {
+  background-color: #f6f6f6;
+}
+
 .display-block {
   transform: translate(0, 0);
 }
