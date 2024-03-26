@@ -24,6 +24,10 @@
   right: 0px;
 }
 
+.carousel b {
+  display: none;
+}
+
 @media (min-width: 768px) {
 
   .carousel {
@@ -40,6 +44,16 @@
 
   .carousel button:last-child {
     right: 5px;
+  }
+
+  .carousel b {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0.9rem;
   }
 }
 
@@ -59,5 +73,9 @@
 
   .carousel button:last-child {
     right: 10px;
+  }
+
+  .carousel b {
+    font-size: 1.1rem;
   }
 }

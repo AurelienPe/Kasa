@@ -23,7 +23,10 @@ const Accommodationpage = () => {
     <main>
       {accommodationData ? (
         <>
-          <Carousel images={accommodationData.pictures} />
+          <Carousel 
+            images={accommodationData.pictures}
+            alt={accommodationData.title}
+            />
           <ul className="accommodationpage">
 
             <li>

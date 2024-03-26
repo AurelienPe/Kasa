@@ -1,31 +1,42 @@
 import React, { useState } from 'react';
 import './carousel.css';
+import data from '../../assets/logements.json';
 
-const Carousel = ({ images }) => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+const Carousel = ({ images, alt }) => {
 
-  const goToNextImage = () => {
-    setCurrentImageIndex((currentImageIndex + 1) % images.length);
-  };
+  let [index, setIndex] = useState(0)
 
-  const goToPreviousImage = () => {
-    setCurrentImageIndex((currentImageIndex - 1 + images.length) % images.length);
-  };
+  const goPrevious = () => {
+    setIndex((index) => 
+      (index - 1 + images.length) % images.length)
+  }
+
+  const goNext = () => {
+    setIndex((index) => 
+      (index + 1) % images.length)
+  }
 
   return (
     <header className="carousel">
-      <img src={images[currentImageIndex]} alt='' />
 
-      <button onClick={goToPreviousImage}>
-        <i className="fa-solid fa-chevron-left"></i>
-      </button>
+      <img src={images[index]} alt={`${alt} (${data.carousel} ${index + 1})`}/>
 
-      <button onClick={goToNextImage}>
-        <i className="fa-solid fa-chevron-right"></i>
-      </button>
+      { images.length > 1 && (
+        <>
+          <button onClick={goPrevious}>
+            <i className="fa-solid fa-chevron-left"></i>
+          </button>
+
+          <b>{index + 1}/{images.length}</b>
+
+          <button onClick={goNext}>
+            <i className="fa-solid fa-chevron-right"></i>
+          </button>
+
+          </>
+      )}
 
     </header>
-  );
+  )
 }
-
 export default Carousel;
