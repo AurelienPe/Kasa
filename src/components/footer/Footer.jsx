@@ -1,6 +1,9 @@
 import logo from '../../images/logo-footer.png'
 import './footer.css'
 
+/**
+ * Defines the Footer component, which renders the footer section of the website.
+ */
 const Footer = () => {
   return (
     <footer>

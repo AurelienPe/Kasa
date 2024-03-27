@@ -4,6 +4,9 @@ import Cards from '../../components/cards/Cards'
 import accommodation from '../../assets/logements'
 
 
+/**
+ * Render the Home component with a banner and cards.
+ */
 const Home = () => {
 
   return (

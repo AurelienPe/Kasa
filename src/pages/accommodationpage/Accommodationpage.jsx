@@ -6,6 +6,9 @@ import Collapse from '../../components/collapse/Collapse';
 import Rating from '../../components/rating/Rating';
 import Error from '../../pages/error/Error';
 
+/**
+ * Renders the Accommodationpage component, which displays details of a specific accommodation.
+ */
 const Accommodationpage = () => {
   const [accommodationData, setAccommodationData] = useState(null);
 

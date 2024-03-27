@@ -4,6 +4,9 @@ import Banner from '../../components/banner/Banner';
 import Collapse from '../../components/collapse/Collapse';
 import aboutdata from '../../assets/about';
 
+/**
+ * Generate the about section with banner and collapsible items.
+ */
 const About = () => {
   const mappedData = aboutdata.map((item, index) => {
     const title = item.title;

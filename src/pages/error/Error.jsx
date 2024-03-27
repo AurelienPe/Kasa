@@ -1,6 +1,9 @@
 import error from '../../images/404.png'
 import './error.css'
 
+/**
+ * Renders an error page with a 404 error message and a link to the home page.
+ */
 const Error = () => {
   return (
     <main className="error">

@@ -1,5 +1,8 @@
 import './rating.css'
 
+/**
+ * Generates star icons based on the rating provided./
+ */
 const Rating = ({ rating }) => {
   const fullStars = Math.min(5, Math.max(0, rating)); // Limite le nombre d'étoiles pleines entre 0 et 5
 

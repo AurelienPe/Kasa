@@ -1,6 +1,9 @@
 import logo from '../../images/logo-header-mobile.png'
 import './nav.css'
 
+/**
+ * Renders a navigation bar component with links and a logo.
+ */
 const Nav = () => {
   return (
     <nav>

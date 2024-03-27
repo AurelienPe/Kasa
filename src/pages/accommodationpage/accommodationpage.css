@@ -25,6 +25,11 @@
   justify-content: space-between;
 }
 
+.accommodationpage .collapse div {
+  align-items: flex-start;
+  flex-direction: column;
+}
+
 .tags-list {
   display: flex;
   flex-wrap: wrap;
@@ -49,7 +54,7 @@
 }
 
 @media (min-width: 768px) {
-  .accommodationpage div {
+  .accommodationpage div:not(.collapse div) {
     justify-content: normal;
     position: absolute;
     right: 15px;

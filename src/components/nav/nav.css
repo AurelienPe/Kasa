@@ -1,6 +1,7 @@
 nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 nav ul {
@@ -13,10 +14,6 @@ nav ul {
 }
 
 @media (min-width: 768px) {
-  
-  nav {
-    justify-content: space-between;
-  }
 
   nav ul {
     font-size: 1.2rem;
@@ -25,7 +22,6 @@ nav ul {
   nav img {
     width: 210px;
   }
-
 }
 
 @media (min-width: 1024px) {

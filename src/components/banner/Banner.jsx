@@ -1,5 +1,8 @@
 import './banner.css'
 
+/**
+ * Function to render a banner with an image and overlay text.
+ */
 const Banner = ({url, className, altText}) => {
   return (
     <header className="banner">

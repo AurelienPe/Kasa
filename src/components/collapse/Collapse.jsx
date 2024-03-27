@@ -1,9 +1,15 @@
 import './collapse.css'
 import React, { useState } from 'react';
 
+/**
+ * Generates a collapsible section with a title, text, and optional list of items.
+ */
 const Collapse = ({ title, text, customKey, list }) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
+    /**
+   * Function to expand or collapse based on the given key.
+   */
   const expandCollapse = (key) => {
     setActiveIndex(key === activeIndex ? null : key);
   }
