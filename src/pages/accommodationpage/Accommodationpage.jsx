@@ -1,30 +1,34 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './accommodationpage.css';
 import Carousel from '../../components/carousel/Carousel';
 import logementsData from '../../assets/logements'
 import Collapse from '../../components/collapse/Collapse';
 import Rating from '../../components/rating/Rating';
-import Error from '../../pages/error/Error';
 
 /**
  * Renders the Accommodationpage component, which displays details of a specific accommodation.
  */
 const Accommodationpage = () => {
   const [accommodationData, setAccommodationData] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Extraire l'ID de l'URL
     const pathname = window.location.pathname;
     const id = pathname.substring(pathname.lastIndexOf('/') + 1);
 
+
     // Rechercher l'objet correspondant dans les données logements.json
     const data = logementsData.find(item => item.id === id);
+    if (!data) {
+      navigate('/404');
+    }
     setAccommodationData(data);
   }, []);
 
   return (
-    <main>
-      {accommodationData ? (
+    <main>{ ! accommodationData ? <div>loading...</div> :
         <>
           <Carousel 
             images={accommodationData.pictures}
@@ -73,9 +77,7 @@ const Accommodationpage = () => {
 
           </ul>
         </>
-      ) : (
-        <Error />
-      )}
+}
     </main>
   );
 }
