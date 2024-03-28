@@ -16,21 +16,22 @@ const Collapse = ({ title, text, customKey, list }) => {
 
   const collapseItems =
     <li key={customKey}>
-      <header>
+      <div>
         <h2>{title}</h2>
         <button onClick={() => expandCollapse(customKey)}>
           <i className={`fa-solid ${activeIndex === customKey ? 'fa-chevron-down' : 'fa-chevron-up'}`}></i>
         </button>
-      </header>
-      <div>
+      </div>
+
+      { activeIndex === customKey && <div>
         {list ? (
           text.map((item, index) => (
-            <p key={index} className={activeIndex === customKey ? 'display-block' : 'display-none'}>{item}</p>
+            <p key={index}>{item}</p>
           ))
         ) : (
-          <p className={activeIndex === customKey ? 'display-block' : 'display-none'}>{text}</p>
+          <p>{text}</p>
         )}
-      </div>
+      </div>}
     </li>
     ;
 

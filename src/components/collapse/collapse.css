@@ -3,7 +3,7 @@
   flex-direction: column;
 }
 
-.collapse header {
+.collapse li div:first-child {
   display: flex;
   justify-content: space-between;
   align-content: center;
@@ -11,7 +11,7 @@
   height: 30px;
   background-color: #FF6060;
   border-radius: 5px;
-  margin: 10px 0;
+  margin: 10px 0 0 0;
 }
 
 .collapse h2 {
@@ -27,12 +27,11 @@
 }
 
 .collapse p {
-  margin: 0;
   position: relative;
-  margin: 5px 10px 0;
+  margin: 0 10px 0;
 }
 
-.collapse div {
+.collapse div:last-child {
   background-color: #f6f6f6;
 }
 
@@ -56,7 +55,7 @@
 
 @media (min-width: 768px) {
 
-  .collapse header{
+  .collapse li div:first-child {
     height: 40px;
     margin-top: 25px;
   }
@@ -84,7 +83,7 @@
     width: 85%;
   }
 
-  .collapse header{
+  .collapse li div:first-child {
     height: 50px;
     margin-top: 35px;
   }
